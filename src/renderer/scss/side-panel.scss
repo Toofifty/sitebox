@@ -1,0 +1,21 @@
+@import 'var';
+
+.side-panel {
+    @extend %drag;
+    height: 100%;
+    width: $side-panel-width;
+    background: $primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__traffic-light-spacer {
+        height: 36px + $pad-xl;
+        width: 100%;
+    }
+
+    &__spacer {
+        flex-grow: 1;
+    }
+}

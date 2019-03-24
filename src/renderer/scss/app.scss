@@ -1,0 +1,20 @@
+@import 'var';
+
+body {
+    height: 100vh;
+    max-height: 100%;
+    width: 100%;
+    margin: 0;
+    background: $primary-darker;
+}
+
+#app {
+    height: 100%;
+    width: 100%;
+}
+
+.app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
