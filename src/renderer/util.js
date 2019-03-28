@@ -64,3 +64,15 @@ export const find = (arr, callback) => {
     const filtered = arr.filter(callback)
     return filtered.length > 0 ? filtered[0] : null
 }
+
+/**
+ * Check if favicon exists (no 404)
+ */
+export const checkFavicon = async (url) => {
+    try {
+        await fetch(url)
+    } catch {
+        return false
+    }
+    return true
+}

@@ -1,22 +1,29 @@
 $side-panel-width: 80px;
 
+$light-gray: #D0D0D6;
+$sonic-silver: #747485;
 $independence: #56566A;
 $arsenic: #3B3B58;
 $gunmetal: #313149;
 $dark-gunmetal: #212130;
+$eerie-black: #12121B;
 
 $rusty-red: #DB324D;
 
+$primary-lightest: var(--primary-lightest, $light-gray);
+$primary-lighter: var(--primary-lighter, $sonic-silver);
 $primary-light: var(--primary-light, $independence);
 $primary: var(--primary, $arsenic);
 $primary-dark: var(--primary-dark, $gunmetal);
-$primary-darker: var(--primary-dark, $dark-gunmetal);
+$primary-darker: var(--primary-darker, $dark-gunmetal);
+$primary-darkest: var(--primary-darkest, $eerie-black);
 $accent: var(--accent, $rusty-red);
 
 $pad-sm: 2px;
 $pad-md: 4px;
 $pad-lg: 8px;
 $pad-xl: 16px;
+$pad-xxl: 24px;
 
 $system-font: -apple-system,
     BlinkMacSystemFont,

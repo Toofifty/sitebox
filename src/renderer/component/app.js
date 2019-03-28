@@ -3,7 +3,8 @@ import Mousetrap from 'mousetrap'
 import '../scss/app.scss'
 import SidePanel from './side-panel'
 import View from './view'
-import { domain, load, find, shortcode, save, favicon } from '../util'
+import { domain, load, find, shortcode, save, favicon, checkFavicon } from '../util'
+import EmptyPanel from './empty-panel'
 
 const App = () => {
 
@@ -38,8 +39,12 @@ const App = () => {
         }
     })
 
-    const updateFavicon = (app, favicon) => {
-        app.favicon = favicon
+    const updateFavicon = async (app, favicon) => {
+        if (await checkFavicon(favicon)) {
+            app.favicon = favicon
+        } else {
+            app.favicon = app.url + 'favicon.ico'
+        }
         setApps([...apps])
     }
 
@@ -67,7 +72,7 @@ const App = () => {
     })
 
     return (
-        <div className="app">
+        <div className="app theme-light">
             <SidePanel
                 apps={apps}
                 openApp={openApp}
@@ -85,6 +90,7 @@ const App = () => {
                     updateFavicon={(favicon) => updateFavicon(app, favicon)}
                 />
             ))}
+            {apps.length === 0 || !openApp && <EmptyPanel />}
         </div>
     )
 }

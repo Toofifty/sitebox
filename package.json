@@ -1,6 +1,6 @@
 {
-  "name": "electron-webpack-quick-start",
-  "version": "0.0.0",
+  "name": "sitebox",
+  "version": "0.2.0",
   "license": "MIT",
   "scripts": {
     "serve": "electron-webpack dev",
@@ -25,5 +25,8 @@
     "electron-builder": "20.38.4",
     "electron-webpack": "^2.6.2",
     "webpack": "4.28.4"
+  },
+  "electronWebpack": {
+    "title": "Sitebox"
   }
 }
